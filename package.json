@@ -1,0 +1,23 @@
+{
+  "name": "cimbot",
+  "version": "1.0.0",
+  "description": "Cimlogic Slack Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamRoss/CimBot.git"
+  },
+  "author": "Sam Ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamRoss/CimBot/issues"
+  },
+  "homepage": "https://github.com/SamRoss/CimBot#readme",
+  "dependencies": {
+    "slackbots": "^0.5.3",
+    "sqlite3": "^3.1.6"
+  }
+}
