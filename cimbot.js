@@ -48,17 +48,13 @@ CimBot.prototype._connectDb = function () {
 
 CimBot.prototype._firstRunCheck = function () {
     var self = this;
-    console.log('first run check');
     self.db.get('SELECT val FROM info WHERE name = "lastrun" LIMIT 1', function (err, record) {
         if (err) {
             return console.error('DATABASE ERROR:', err);
         }
 
         var currentTime = (new Date()).toJSON();
-
-        console.log(record)
         if (!record) {
-        	console.log('welcome message');
             self._welcomeMessage();
             return self.db.run('INSERT INTO info(name, val) VALUES("lastrun", ?)', currentTime);
         }
